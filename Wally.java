@@ -1,27 +1,20 @@
 import robocode.*;
-//import java.awt.Color;
-
-// API help : https://robocode.sourceforge.io/docs/robocode/robocode/Robot.html
+import java.awt.Color;
 
 /**
- * Wally - a robot by (your name here)
+ * Wally - a robot by Marcos
  */ 
 public class Wally extends Robot
 {
     /**
-     * run: Copia's default behavior
+     * run: comportamento principal do robô
      */
     public void run() {
-        // Initialization of the robot should be put here
+        // Definindo cores: corpo, canhão, radar
+        setColors(Color.red, Color.black, Color.white);
 
-        // After trying out your robot, try uncommenting the import at the top,
-        // and the next line:
-
-        // setColors(Color.red,Color.blue,Color.green); // body,gun,radar
-
-        // Robot main loop
+        // Loop principal do robô
         while(true) {
-            // Replace the next 4 lines with any behavior you would like
             ahead(100);
             turnGunRight(360);
             back(100);
@@ -30,24 +23,23 @@ public class Wally extends Robot
     }
 
     /**
-     * onScannedRobot: What to do when you see another robot
+     * onScannedRobot: o que fazer quando detectar outro robô
      */
     public void onScannedRobot(ScannedRobotEvent e) {
         fire(1);
     }
 
     /**
-     * onHitByBullet: What to do when you're hit by a bullet
+     * onHitByBullet: o que fazer quando for atingido por um tiro
      */
     public void onHitByBullet(HitByBulletEvent e) {
         back(10);
     }
 
     /**
-     * onHitWall: What to do when you hit a wall
+     * onHitWall: o que fazer quando bater na parede
      */
     public void onHitWall(HitWallEvent e) {
         back(20);
-    }   
+    }    
 }
-
