@@ -43,7 +43,7 @@ public class Wally extends Robot {
      */
     public void onScannedRobot(ScannedRobotEvent e) {
         // Estratégia simples: atira quando detectar um inimigo
-        fire(1);
+        fire(3);
     }
 
     /**
@@ -51,7 +51,7 @@ public class Wally extends Robot {
      */
     public void onHitByBullet(HitByBulletEvent e) {
         // Ao ser atingido, recua um pouco
-        back(10);
+        back(450);
     }
 
     /**
@@ -59,8 +59,9 @@ public class Wally extends Robot {
      */
     public void onHitWall(HitWallEvent e) {
         // Ao colidir com uma parede, recua e vira para não ficar preso
-        back(20);
-        turnRight(90);
+        back(450);
+        turnRight(200);
     }    
 }
+
 
