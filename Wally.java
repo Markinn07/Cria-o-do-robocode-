@@ -46,15 +46,15 @@ public class Wally extends Robot {
      * onHitByBullet: recuar um pouco ao ser atingido
      */
     public void onHitByBullet(HitByBulletEvent e) {
-        back(450);
+        back(20);
     }
 
     /**
      * onHitWall: recuar e virar ao bater em parede
      */
     public void onHitWall(HitWallEvent e) {
-        back(450);
-        turnRight(500);
+        back(400);
+        turnRight(450);
     }
 }
 
